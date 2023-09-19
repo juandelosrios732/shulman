@@ -95,3 +95,9 @@ input[type="text"]::placeholder {
     font-family: var(--base-font);
     font-weight: 500;
 }
+
+/*LOGO*/
+
+.logo {
+    width: 250px;
+}
