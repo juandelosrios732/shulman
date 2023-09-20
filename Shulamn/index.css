@@ -57,6 +57,9 @@
     --spacing-16: 1.6rem;
     --spacing-12: 1.2rem;
     --spacing-8: 0.8rem;
+    --spacing-6: 0.6rem;
+    --spacing-4: 0.4rem;
+    --spacing-2: 0.2rem;
 }
 
 /*NORMALIZACION*/
@@ -98,6 +101,67 @@ input[type="text"]::placeholder {
 
 /*LOGO*/
 
-.logo {
+.navbar_logo {
     width: 250px;
+}
+
+
+/* HEADER */
+.navbar { 
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to left, var(--primary-solid), var(--secondary-solid));
+    font-size: var(--font-small);
+    padding: auto var(--spacing-24) ;
+}
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-24);
+    color: var(--dark-solid);
+}
+
+.navbar_link {
+    padding: var(--spacing-6);
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    transition: background .3s ease-in-out;
+}
+
+.navbar_link:hover {
+    color: var(--light-bg-solid);
+}
+
+.with-submenu:hover .navbar_submenu {
+    display: block;
+}
+.navbar_submenu {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-solid);
+    padding: var(--spacing-12);
+    border-radius: 5px;
+    
+}   
+.navbar_submenu-link {
+    display: block;
+    transition: background .3s ease-in-out;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+/* .navbar_submenu-link:hover {
+    background-color: var(--primary-solid);
+} */
+
+.navbar_search {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-6);
 }
