@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 /*Declaración de variables*/
 :root {
@@ -44,7 +44,9 @@
     --font-large: 2.4em;
     --font-medium: 1.8em;
     --font-small: 1.6em;
-    --font-xsmall: 1.4em;
+    --font-xsmall: 1.0em;
+    
+    
 
     /* Spacings (márgenes para distanciar elementos) 1 rem =10px*/
 
@@ -111,14 +113,20 @@ input[type="text"]::placeholder {
     display: flex;
     justify-content: space-around;
     background: linear-gradient(to left, var(--primary-solid), var(--secondary-solid));
-    font-size: var(--font-small);
-    padding: auto var(--spacing-24) ;
+    padding: var(--spacing-8) var(--spacing-24) ;
 }
 .navbar_menu {
     display: flex;
     align-items: center;
     gap: var(--spacing-24);
+}
+
+.navbar_item {
+    font-size: var(--font-small);
     color: var(--dark-solid);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--alternative-font);
 }
 
 .navbar_link {
@@ -139,14 +147,17 @@ input[type="text"]::placeholder {
 .with-submenu:hover .navbar_submenu {
     display: block;
 }
+
 .navbar_submenu {
     display: none;
     position: absolute;
     background-color: var(--secondary-solid);
     padding: var(--spacing-12);
     border-radius: 5px;
-    
-}   
+    font-size: var(--font-xsmall);
+    font-weight: 600;
+}
+
 .navbar_submenu-link {
     display: block;
     transition: background .3s ease-in-out;
@@ -156,12 +167,31 @@ input[type="text"]::placeholder {
     gap: var(--spacing-2);
 }
 
-/* .navbar_submenu-link:hover {
-    background-color: var(--primary-solid);
-} */
+.navbar_submenu-link:hover {
+    text-decoration: underline;
+}
 
 .navbar_search {
     display: flex;
     align-items: center;
-    gap: var(--spacing-6);
+    gap: var(--spacing-8);
+    position: relative;
+    font-size: var(--font-medium);
+}
+
+.navbar_search input {
+    border-radius: 5px;
+    padding: var(--spacing-4);
+    font-family: var(--alternative-font);
+    padding-left: var(--spacing-24);
+    font-weight: 600;
+    border: none;
+    max-width: 150px;
+}
+
+#navbar_search-icono {
+    position: absolute;
+    left: 0;
+    color: var(--secondary-solid);
+    padding-left: var(--spacing-4);
 }
