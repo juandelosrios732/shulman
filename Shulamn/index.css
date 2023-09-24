@@ -1,42 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 /*Declaración de variables*/
+
 :root {
     /*Paleta de colores*/
     --primary-solid: #294261;
     --primary-900: rgba(41, 66, 97, 0.9);
     --primary-500: rgba(41, 66, 97, 0.5);
     --primary-300: rgba(41, 66, 97, 0.3);
-    
     --secondary-solid: #B5C1C1;
     --secondary-900: rgba(181, 193, 193, 0.9);
     --secondary-500: rgba(181, 193, 193, 0.5);
     --secondary-300: rgba(181, 193, 193, 0.3);
-    
     --red-border: #F20505;
     --red-border-900: rgba(242, 5, 5, 0.9);
     --red-border-500: rgba(242, 5, 5, 0.5);
     --red-border-300: rgba(242, 5, 5, 0.3);
-
     --green-logo: #7EB772;
     --grenn-logo-900: rgba(126, 183, 114, 0.9);
     --grenn-logo-500: rgba(126, 183, 114, 0.5);
     --grenn-logo-300: rgba(126, 183, 114, 0.3);
-
     --dark-solid: #000000;
     --dark-900: rgba(31, 31, 31, 0.9);
     --dark-500: rgba(31, 31, 31, 0.5);
     --dark-300: rgba(31, 31, 31, 0.3);
-
     /*colores para el blackgraund*/
     --primary-solid: #294261;
     --light-bg-solid: white;
     --light-font-solid: white;
-    
     /*TYPOGRAPHY*/
     --base-font: 'Playfair Display', serif;
     --alternative-font: 'EB Garamond', serif;
-    
     /*Tamaños fuente 1 em = 10px*/
     --font-display: 4.6em;
     --font-jumbo: 3.8em;
@@ -45,11 +39,7 @@
     --font-medium: 1.8em;
     --font-small: 1.6em;
     --font-xsmall: 1.0em;
-    
-    
-
     /* Spacings (márgenes para distanciar elementos) 1 rem =10px*/
-
     --spacing-128: 12.8rem;
     --spacing-68: 6.8rem;
     --spacing-36: 3.6rem;
@@ -64,7 +54,9 @@
     --spacing-2: 0.2rem;
 }
 
+
 /*NORMALIZACION*/
+
 *,
 *::before,
 *::after {
@@ -79,27 +71,33 @@ html {
     color: var(--dark-solid);
 }
 
-a{
+a {
     text-decoration: none;
     font-family: inherit;
     color: inherit;
 }
-.page-header, 
+
+.page-header,
 footer {
     font-family: var(--alternative-font);
     color: var(--light-font-solid);
 }
-ul, ol {
+
+ul,
+ol {
     list-style-type: none;
 }
+
 img {
-    width: 100%; 
+    width: 100%;
 }
+
 input[type="text"]::placeholder {
     color: var(--dark-300);
     font-family: var(--base-font);
     font-weight: 500;
 }
+
 
 /*LOGO*/
 
@@ -109,12 +107,14 @@ input[type="text"]::placeholder {
 
 
 /* HEADER */
-.navbar { 
+
+.navbar {
     display: flex;
     justify-content: space-around;
     background: linear-gradient(to left, var(--primary-solid), var(--secondary-solid));
-    padding: var(--spacing-8) var(--spacing-24) ;
+    padding: var(--spacing-8) var(--spacing-24);
 }
+
 .navbar_menu {
     display: flex;
     align-items: center;
@@ -194,4 +194,108 @@ input[type="text"]::placeholder {
     left: 0;
     color: var(--secondary-solid);
     padding-left: var(--spacing-4);
+}
+
+
+/* footer */
+
+.site-footer {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to left, var(--primary-solid), var(--secondary-solid));
+    padding: 45px 0 20px;
+}
+
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: var(--secondary-500);
+}
+
+@media (max-width: 991px) {
+    .site-footer [class^="col-"] {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        padding-bottom: 0;
+    }
+    .site-footer .social-icons {
+        text-align: center;
+    }
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: var(--green-logo);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.social-icons a {
+    background-color: #eceeef;
+    color: var(--secondary-300);
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: var(--green-logo);
+    background-color: var(--primary-300);
+}
+
+.social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px;
+}
+
+.social-icons a.facebook:hover {
+    background-color: var(--green-logo);
+}
+
+.social-icons a.twitter:hover {
+    background-color: var(--green-logo);
+}
+
+.social-icons a.youtube:hover {
+    background-color: var(--green-logo);
+}
+
+@media (max-width: 767px) {
+    .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600;
+    }
 }
