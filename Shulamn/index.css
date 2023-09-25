@@ -98,6 +98,14 @@ input[type="text"]::placeholder {
     font-weight: 500;
 }
 
+/* ClASES DE AYUDA */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
 /*LOGO*/
 
 .navbar_logo {
@@ -106,11 +114,14 @@ input[type="text"]::placeholder {
 
 
 /* HEADER */
+header {
+    background: linear-gradient(to left, var(--primary-solid), var(--secondary-solid));
+    padding: var(--spacing-8) 0;
+}
+
 .navbar { 
     display: flex;
-    justify-content: space-around;
-    background: linear-gradient(to left, var(--primary-solid), var(--secondary-solid));
-    padding: var(--spacing-8) var(--spacing-24) ;
+    justify-content: space-between;
 }
 
 .navbar_menu {
@@ -169,7 +180,7 @@ input[type="text"]::placeholder {
     text-decoration: underline;
 }
 
-.navbar_search {
+.navbar_search, .input_search{
     display: flex;
     align-items: center;
     gap: var(--spacing-8);
@@ -177,7 +188,7 @@ input[type="text"]::placeholder {
     font-size: var(--font-medium);
 }
 
-.navbar_search input {
+.input_search input {
     border-radius: 5px;
     padding: var(--spacing-4);
     font-family: var(--alternative-font);
@@ -193,6 +204,113 @@ input[type="text"]::placeholder {
     color: var(--secondary-solid);
     padding-left: var(--spacing-4);
 }
+
+/* MAIN Sección principal de la página*/
+
+.main_container {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-24) auto;
+}
+
+/* SLIDER */
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.slider_titulo,  .titulos {
+    border-left-color: var(--red-border);
+    border-bottom: 3px solid;
+    border-left: 10px solid var(--red-border);
+    box-sizing: border-box;
+    display: block;
+}
+
+.slider_titulo-nombre, .titulo_nueva_seccion {
+    font-family: var(--alternative-font);
+    font-size: var(--font-medium);
+    font-weight: 500;
+    background-color: var(--dark-solid);
+    color: var(--light-font-solid);
+    padding: var(--spacing-4) var(--spacing-8);
+    display: inline-block;
+}
+
+.card_item-img{
+    width: 300px;
+}
+
+/* CURSOS Y BLOG */
+
+.contenidos {
+    display: flex;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-20);
+}
+
+.contenido_cursos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+}
+
+.cursos_actuales {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-12);
+    text-align: right;
+
+}
+
+.cursos_actuales-nombre, .subtitulos {
+    font-family: var(--base-font);
+    font-size: var(--font-xlarge);
+    font-weight: 700;
+}
+
+.cursos_actuales-search {
+    border: solid var(--dark-300);
+    border-radius: 5px;
+}
+
+
+.contenido_blog {
+    display: flex;
+    border: solid var(--dark-solid);
+    padding: var(--spacing-16);
+    border-radius: 5px;
+}
+
+.contenido_blog_link {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    text-align: right;
+    gap: var(--spacing-36);
+
+}
+
+.contenido_blog-img {
+    max-width: 200px;
+}
+
+
+
+
+
+
+
+
+
 
 /* footer */
 
