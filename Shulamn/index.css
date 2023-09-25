@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/*Declaración de variables*/
+
+:root {
+    /*Paleta de colores*/
+    --primary-solid: #294261;
+    --primary-900: rgba(41, 66, 97, 0.9);
+    --primary-500: rgba(41, 66, 97, 0.5);
+    --primary-300: rgba(41, 66, 97, 0.3);
+    --secondary-solid: #B5C1C1;
+    --secondary-900: rgba(181, 193, 193, 0.9);
+    --secondary-500: rgba(181, 193, 193, 0.5);
+    --secondary-300: rgba(181, 193, 193, 0.3);
+    --red-border: #F20505;
+    --red-border-900: rgba(242, 5, 5, 0.9);
+    --red-border-500: rgba(242, 5, 5, 0.5);
+    --red-border-300: rgba(242, 5, 5, 0.3);
+    --green-logo: #7EB772;
+    --grenn-logo-900: rgba(126, 183, 114, 0.9);
+    --grenn-logo-500: rgba(126, 183, 114, 0.5);
+    --grenn-logo-300: rgba(126, 183, 114, 0.3);
+    --dark-solid: #000000;
+    --dark-900: rgba(31, 31, 31, 0.9);
+    --dark-500: rgba(31, 31, 31, 0.5);
+    --dark-300: rgba(31, 31, 31, 0.3);
+    /*colores para el blackgraund*/
+    --primary-solid: #294261;
+    --light-bg-solid: white;
+    --light-font-solid: white;
+    /*TYPOGRAPHY*/
+    --base-font: 'Playfair Display', serif;
+    --alternative-font: 'EB Garamond', serif;
+    /*Tamaños fuente 1 em = 10px*/
+    --font-display: 4.6em;
+    --font-jumbo: 3.8em;
+    --font-xlarge: 3.0em;
+    --font-large: 2.4em;
+    --font-medium: 1.8em;
+    --font-small: 1.6em;
+    --font-xsmall: 1.0em;
+    /* Spacings (márgenes para distanciar elementos) 1 rem =10px*/
+    --spacing-128: 12.8rem;
+    --spacing-68: 6.8rem;
+    --spacing-36: 3.6rem;
+    --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
+    --spacing-20: 2rem;
+    --spacing-16: 1.6rem;
+    --spacing-12: 1.2rem;
+    --spacing-8: 0.8rem;
+    --spacing-6: 0.6rem;
+    --spacing-4: 0.4rem;
+    --spacing-2: 0.2rem;
+}
+
+
+/*NORMALIZACION*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--base-font);
+    font-size: 62.5%;
+    color: var(--dark-solid);
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+.page-header,
+footer {
+    font-family: var(--alternative-font);
+    color: var(--light-font-solid);
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+input[type="text"]::placeholder {
+    color: var(--dark-300);
+    font-family: var(--base-font);
+    font-weight: 500;
+}
+
+/* ClASES DE AYUDA */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*LOGO*/
+
+.navbar_logo {
+    width: 250px;
+}
+
+
+/* HEADER */
+header {
+    background: linear-gradient(to left, var(--primary-solid), var(--secondary-solid));
+    padding: var(--spacing-8) 0;
+}
+
+.navbar { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-24);
+}
+
+.navbar_item {
+    font-size: var(--font-small);
+    color: var(--dark-solid);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--alternative-font);
+}
+
+.navbar_link {
+    padding: var(--spacing-6);
+    border-radius: 15px;
+    display: inline-block;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    transition: background .3s ease-in-out;
+}
+
+.navbar_link:hover {
+    color: var(--light-bg-solid);
+}
+
+.with-submenu:hover .navbar_submenu {
+    display: block;
+}
+
+.navbar_submenu {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-solid);
+    padding: var(--spacing-12);
+    border-radius: 5px;
+    font-size: var(--font-xsmall);
+    font-weight: 600;
+}
+
+.navbar_submenu-link {
+    display: block;
+    transition: background .3s ease-in-out;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.navbar_submenu-link:hover {
+    text-decoration: underline;
+}
+
+.navbar_search, .input_search{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+    position: relative;
+    font-size: var(--font-medium);
+}
+
+.input_search input {
+    border-radius: 5px;
+    padding: var(--spacing-4);
+    font-family: var(--alternative-font);
+    padding-left: var(--spacing-24);
+    font-weight: 600;
+    border: none;
+    max-width: 150px;
+}
+
+#navbar_search-icono {
+    position: absolute;
+    left: 0;
+    color: var(--secondary-solid);
+    padding-left: var(--spacing-4);
+}
+
+/* MAIN Sección principal de la página*/
+
+.main_container {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-24) auto;
+}
+
+/* SLIDER */
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8);
+}
+
+.slider_titulo,  .titulos {
+    border-left-color: var(--red-border);
+    border-bottom: 3px solid;
+    border-left: 10px solid var(--red-border);
+    box-sizing: border-box;
+    display: block;
+}
+
+.slider_titulo-nombre, .titulo_nueva_seccion {
+    font-family: var(--alternative-font);
+    font-size: var(--font-medium);
+    font-weight: 500;
+    background-color: var(--dark-solid);
+    color: var(--light-font-solid);
+    padding: var(--spacing-4) var(--spacing-8);
+    display: inline-block;
+}
+
+.card_item-img{
+    width: 300px;
+}
+
+/* CURSOS Y BLOG */
+
+.contenidos {
+    display: flex;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-20);
+}
+
+.contenido_cursos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+}
+
+.cursos_actuales {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-12);
+    text-align: right;
+
+}
+
+.cursos_actuales-nombre, .subtitulos {
+    font-family: var(--base-font);
+    font-size: var(--font-xlarge);
+    font-weight: 700;
+}
+
+.cursos_actuales-search {
+    border: solid var(--dark-300);
+    border-radius: 5px;
+}
+
+
+.contenido_blog {
+    display: flex;
+    border: solid var(--dark-solid);
+    padding: var(--spacing-16);
+    border-radius: 5px;
+}
+
+.contenido_blog_link {
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    text-align: right;
+    gap: var(--spacing-36);
+
+}
+
+.contenido_blog-img {
+    max-width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+/* footer */
+
+.site-footer {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to left, var(--primary-solid), var(--secondary-solid));
+    padding: 45px 0 20px;
+}
+
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: var(--secondary-500);
+}
+
+@media (max-width: 991px) {
+    .site-footer [class^="col-"] {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        padding-bottom: 0;
+    }
+    .site-footer .social-icons {
+        text-align: center;
+    }
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: var(--green-logo);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.social-icons a {
+    background-color: #eceeef;
+    color: var(--secondary-300);
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: var(--green-logo);
+    background-color: var(--primary-300);
+}
+
+.social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px;
+}
+
+.social-icons a.facebook:hover {
+    background-color: var(--green-logo);
+}
+
+.social-icons a.twitter:hover {
+    background-color: var(--green-logo);
+}
+
+.social-icons a.youtube:hover {
+    background-color: var(--green-logo);
+}
+
+@media (max-width: 767px) {
+    .social-icons li.title {
+        display: block;
+        margin-right: 0;
+        font-weight: 600;
+    }
+}
