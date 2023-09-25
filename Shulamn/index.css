@@ -101,6 +101,14 @@ input[type="text"]::placeholder {
     font-weight: 500;
 }
 
+/* CLASES DE AYUDA */
+
+.container {
+    /*Creando un margen para las secciones main, a los mains se les pone la clase container, que permite generar un ancho máximo de 1200 pixeles y un margen también, calcula automáticamente el márgen de los costados, evitando que se amplie de sobremanera si hay la página se visualiza en una pantalla muy grande*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /*LOGO*/
 
 .navbar_logo {
@@ -109,12 +117,16 @@ input[type="text"]::placeholder {
 
 
 /* HEADER */
+
+header {
+    background: linear-gradient(to left, var(--primary-solid), var(--secondary-solid));
+}
 .navbar { 
     display: flex;
-    justify-content: space-around;
-    background: linear-gradient(to left, var(--primary-solid), var(--secondary-solid));
-    padding: var(--spacing-8) var(--spacing-24) ;
+    justify-content: space-between;
+    padding: var(--spacing-8) var(--spacing-24);
 }
+
 .navbar_menu {
     display: flex;
     align-items: center;
@@ -195,3 +207,10 @@ input[type="text"]::placeholder {
     color: var(--secondary-solid);
     padding-left: var(--spacing-4);
 }
+
+/* MAIN Sección principal de la página*/
+
+.slider img {
+    max-width: 250px;
+}
+
