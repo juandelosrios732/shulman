@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 /*Declaración de variables*/
 
@@ -29,8 +29,8 @@
     --light-bg-solid: white;
     --light-font-solid: white;
     /*TYPOGRAPHY*/
-    --base-font: 'Playfair Display', serif;
-    --alternative-font: 'EB Garamond', serif;
+    --base-font: 'Roboto', sans-serif;
+    --alternative-font: 'Public Sans', sans-serif;
     /*Tamaños fuente 1 em = 10px*/
     --font-display: 4.6em;
     --font-jumbo: 3.8em;
