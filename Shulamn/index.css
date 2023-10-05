@@ -79,13 +79,12 @@ a {
 
 body {
     font-size: var(--font-large);
-    
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
 }
 
-.page-header,
+header,
 footer {
     font-family: var(--alternative-font);
     color: var(--light-font-solid);
@@ -149,7 +148,7 @@ header {
 
 .navbar_link {
     padding: var(--spacing-6);
-    border-radius: .9375rem;
+    border-radius: 5px;
     display: inline-block;
     position: relative;
     display: flex;
@@ -171,7 +170,7 @@ header {
     position: absolute;
     background-color: var(--secondary-solid);
     padding: var(--spacing-12);
-    border-radius: .3125rem;
+    border-radius: 5px;
     font-size: var(--font-xsmall);
     font-weight: 600;
 }
@@ -218,7 +217,7 @@ header {
 
 .main_container {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     margin: var(--spacing-24) auto;
     gap: var(--spacing-24);
 }
@@ -234,8 +233,6 @@ header {
 .titulos {
     box-sizing: border-box;
     border-bottom: var(--spacing-2) solid;
-   
-    
 }
 
 .titulo_nueva_seccion {
@@ -247,11 +244,10 @@ header {
     padding: var(--spacing-4) var(--spacing-8);
     display: inline-block;
     border-left: var(--spacing-8) solid var(--red-border);
-    
 }
 
 .card_item-img{
-    width: 300px;
+    width: 80%;
 }
 
 /* CURSOS Y BLOG */
