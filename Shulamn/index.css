@@ -79,6 +79,10 @@ a {
 
 body {
     font-size: var(--font-large);
+    
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
 }
 
 .page-header,
@@ -215,10 +219,8 @@ header {
 .main_container {
     display: grid;
     grid-template-columns: 50% 50%;
-    /* justify-content: space-between; */
     margin: var(--spacing-24) auto;
     gap: var(--spacing-24);
-    flex: 50%;
 }
 
 /* SLIDER */
@@ -255,7 +257,8 @@ header {
 /* CURSOS Y BLOG */
 
 .contenidos {
-    display: flex;
+    display: grid;
+    grid-template-rows: 50% 50%;
 }
 
 .contenido {
@@ -322,6 +325,10 @@ header {
     padding: var(--spacing-8) 0;
     font-size: var(--font-medium);
     font-family: var(--alternative-font);
+    /* position: absolute;
+    bottom: 0;
+    width: 100%; */
+    /* margin-top: auto; */
 }
 
 .footer-row {
