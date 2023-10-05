@@ -45,19 +45,11 @@
                     <input type="text" placeholder="Buscar">
                 </li>
             </ul>
-                 <!-- Carrusel de noticias -->
-                 <div class="ItemCarrusel">
-                    <div class="TarjetaCarrusel">
-
-                    </div>
-                    <div></div>
-
-                 </div>
         </nav>
     </header>
     <main class="main_container container">
         <section class="slider">
-            <div class="slider_titulo titulos">
+            <div class="slider_subtitulo titulos">
                 <h2 class="slider_titulo-nombre titulo_nueva_seccion">ACTUALIDAD</h2>
             </div>
             <ul class="slider_items">
@@ -68,7 +60,8 @@
                                 <img class="card_item-img" src="./imagenes/descarga.jpg" alt="">
                             </picture>
                             <picture class="card_item-cover">
-                                <img class="card_item-img" src="./imagenes/descarga.jpg" alt="">
+                                <img class="card_item-img" src="./imagenes/descarga.jpg" alt=""
+                                style="display: none;">
                             </picture>
                             <picture class="card_item-cover">
                                 <img class="card_item-img" src="./imagenes/descarga.jpg" alt="" style="display: none;">
@@ -84,21 +77,28 @@
                     <div class="contenido_cursos_titulo titulos">
                         <h2 class="contenido_cursos_titulo-nombre titulo_nueva_seccion">CURSOS ACTUALES</h2>
                     </div>
-                    <div class="cursos_actuales">
-                        <h3 class="cursos_actuales-nombre subtitulos">PERONISMO Y <br> DERECHOS HUMANOS</h3>
-                        <div class="cursos_actuales-search input_search">
-                            <iconify-icon id="navbar_search-icono" icon="mdi:search"></iconify-icon>
-                            <input type="text" placeholder="Buscar cursos">
-                        </div>
+                    <!-- <div class="cursos_actuales-search input_search">
+                        <iconify-icon id="navbar_search-icono" icon="mdi:search"></iconify-icon>
+                        <input type="text" placeholder="Buscar cursos">
+                    </div> -->
+                    <div>
+                        <a class="cursos_actuales contenido_card_link" href="">
+                            <img class="cursos_contenido_img" src="./imagenes/peronismoyddhh.jpg" alt="">
+                            <h3 class="cursos_actuales-nombre subtitulos">PERONISMO Y DERECHOS HUMANOS</h3>
+                        </a>
                     </div>
                 </div>
                 <div class="contenido_blog">
-                    <a class="contenido_blog_link"  href="">
-                        <img class="contenido_blog-img" src="./imagenes/imagenblog.jpg" alt="">
-                        <h3 class="subtitulos contenido_blog-subtitulo">BLOG:<br>CRÓNICAS <br>DEL NUEVO SIGLO</h3>
-                    </a>
+                    <div class="titulos">
+                        <h2 class="titulo_nueva_seccion">BLOG</h2>
+                    </div>
+                    <div>
+                        <a class="contenido_blog_link contenido_card_link"  href="">
+                            <img class="contenido_blog-img cursos_contenido_img" src="./imagenes/imagenblog.jpg" alt="">
+                            <h3 class="subtitulos contenido_blog-subtitulo">CRÓNICAS DEL NUEVO SIGLO</h3>
+                        </a>
+                    </div>
                 </div>
-
             </div>
         </section>
     </main>
@@ -114,25 +114,17 @@
                     </ul>
                 </div>
 
-                    <div class="footer-links">
-                      <h4>SIGUENOS</h4>
-                      <ul class="social-link">
-                        <li> <a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                        <li> <a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
-                      </ul>
-                    </div>
-                        
-                    </div>
-
-
-                </div> 
+                <div class="footer-links">
+                    <h4>SIGUENOS</h4>
+                    <ul class="social-link">
+                    <li> <a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li> <a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
             </div>  
-        
-            </div>
-        
-    
-        </footer>
-        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        </div>
+    </footer>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
 </body>
 
