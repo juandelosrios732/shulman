@@ -117,7 +117,8 @@ input[type="text"]::placeholder {
 /*LOGO*/
 
 .navbar_logo {
-    width: 250px;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 
@@ -300,12 +301,11 @@ header {
     border-radius: 5px;
 }
 
-.contenido_card_link img {
+.contenido_card_img {
     max-width: 200px;
     max-height: 200px;
 }
 
-/* 1920*1080 */
 
 
 
@@ -415,7 +415,31 @@ header {
     -webkit-animation-fill-color: transparent;
     transition: all 265 ease-inn;
 }
-@media(max-width:61.9375rem) {
+
+
+/* RESPONSIVE */
+
+/* 1920*1080 */
+
+/* Pantallas más grandes (de 1200px en adelante) */
+
+
+
+
+/* Pantallas computadores (hasta 1200px) */
+
+@media (max-width: 1200px) {
+    
+}
+
+
+/* Tablets (tablets, hasta 960px) */
+
+@media (max-width: 960px) {
+    body {
+        font-size: var(--font-medium);
+    }
+
     .footer-row {
         text-align: center;
     }
@@ -424,33 +448,57 @@ header {
         width: 100%;
         margin-bottom: 1.875rem;
     }
-
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
+/* Celulares (landscape phones, hasta 480px) */
 
-@media (max-width: 1200px) {
+@media (max-width: 480px) {
+
     body {
-        font-size: var(--font-medium);
+        font-size: var(--font-small);
     }
-}
 
-/* Large devices (desktops, 992px and up) */
+    
 
-@media (max-width: 992px) {
-    body {
-        font-size: var(--font-medium);
+    .container {
+        margin: var(--spacing-2) var(--spacing-8);
     }
-}
+    
 
-/* Medium devices (tablets, 768px and up) */
+    .navbar_logo {
+        max-width: 100px;
+        max-height: 100px;
+    }
 
-@media (max-width: 768px) {
+    .navbar_menu {
+        gap: 0;
+        display: none;
+    }
 
-}
+    .navbar_search input {
+        max-width: 10px;
+    }
 
-/* Small devices (landscape phones, 576 and up) */
+    .main_container {
+        display: flex;
+        flex-direction: column;
+        margin: var(--spacing-12) var(--spacing-8);
+    }
 
-@media (max-width: 576px) {
+    .card_item-img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .contenido_card_img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .footer-links {
+        align-items: center;
+        padding: var(--spacing-8);
+        margin: 0;
+    }
 
 }
