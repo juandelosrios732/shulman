@@ -421,34 +421,77 @@ header {
 
 /* 1920*1080 */
 
-/* Pantallas más grandes (de 1200px en adelante) */
+/* Pantallas más grandes (de 1328px en adelante) */
 
 
 
 
-/* Pantallas computadores (hasta 1200px) */
+/* Pantallas computadores (hasta 1328px) */
 
-@media (max-width: 1200px) {
+@media (max-width: 1328px) {
     
 }
+
+/* 1024px */
 
 
 /* Tablets (tablets, hasta 960px) */
 
 @media (max-width: 960px) {
     body {
-        font-size: var(--font-medium);
+        font-size: var(--font-small);
     }
 
-    .footer-row {
-        text-align: center;
+    .container {
+        margin: var(--spacing-6) var(--spacing-16);
     }
+
+    .navbar_logo {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .navbar_menu {
+        gap: 0;
+        display: none;
+    }
+
+    .main_container {
+        display: flex;
+        flex-direction: column;
+        margin: var(--spacing-12) var(--spacing-16);
+    }
+
+    .card_item-img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    .contenido_card_link {
+        text-align: right;
+        justify-content: space-between;
+    }
+
+    .contenido_card_img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+    /* .footer-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    } */
 
     .footer-links {
-        width: 100%;
-        margin-bottom: 1.875rem;
+        /* align-items: center; */
+        padding: var(--spacing-8);
+        margin: 0;
     }
 }
+
+/* 768px */
+
 
 /* Celulares (landscape phones, hasta 480px) */
 
@@ -458,13 +501,10 @@ header {
         font-size: var(--font-small);
     }
 
-    
-
     .container {
         margin: var(--spacing-2) var(--spacing-8);
     }
     
-
     .navbar_logo {
         max-width: 100px;
         max-height: 100px;
@@ -495,10 +535,18 @@ header {
         max-height: 150px;
     }
 
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+
     .footer-links {
         align-items: center;
-        padding: var(--spacing-8);
         margin: 0;
     }
 
 }
+
+/* 320px */
